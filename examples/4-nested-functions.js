@@ -1,5 +1,3 @@
-const global = window;
-
 let myObject = {
     myFunction: function() {
         console.log(this === myObject);     // true
