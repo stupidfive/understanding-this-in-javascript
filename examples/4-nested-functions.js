@@ -1,4 +1,4 @@
-let myObject = {
+const myObject = {
     myFunction: function() {
         console.log(this === myObject);     // true
 

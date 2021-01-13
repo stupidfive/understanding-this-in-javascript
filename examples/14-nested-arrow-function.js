@@ -1,8 +1,8 @@
-let myObject = {
+const myObject = {
     myFunction: function() {
         console.log(this === myObject);     // true
 
-        let innerArrow = () => {
+        const innerArrow = () => {
             console.log(this === myObject); // true
         };
         innerArrow();

@@ -1,4 +1,4 @@
-let myObject = {
+const myObject = {
     myFunction: function(a, b) {
         console.log(a + ' ' + b);       // hello world
         console.log(this === myObject);     // false
@@ -6,7 +6,7 @@ let myObject = {
     }
 }
 
-let myOtherObject = {};
+const myOtherObject = {};
 
-let myFunction = myObject.myFunction.bind(myOtherObject);
+const myFunction = myObject.myFunction.bind(myOtherObject);
 myFunction('hello', 'world');

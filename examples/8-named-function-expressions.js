@@ -1,4 +1,4 @@
-let myFunction = function myOtherFunction(recurse) {
+const myFunction = function myOtherFunction(recurse) {
     if (recurse) {
         console.log('mark 1');
         myFunction(false);  // OK

@@ -1,9 +1,9 @@
-let myObject = {
+const myObject = {
     myFunction() {
         console.log(this === myObject);     // false
     }
 }
 
 myObject.myFunction();  // true
-let myFunction = myObject.myFunction;
+const myFunction = myObject.myFunction;
 myFunction();   // false

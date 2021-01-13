@@ -1,6 +1,5 @@
 myFunction();   // TypeError
 
-// var or let, doesn't matter
-var myFunction = function() {
+const myFunction = function() {
     console.log('hi');
 }
