@@ -1,6 +1,8 @@
 # Understanding `this` in JavaScript
 
-In global scope, `this` references the `window` object in a browser, or the `global` object in node.js.
+## Basic Behavior of `this`
+
+In global scope, `this` references the `window` object in a browser (or the `global` object in node.js).
 
 ```javascript
 console.log(this === window);   // true
@@ -62,7 +64,7 @@ const myObject = {
 myObject.myFunction();
 ```
 
-## Editing `this`
+## Manually Change the Value of `this`
 
 Using `call`
 
@@ -168,5 +170,3 @@ const myFunction = () => {
 myFunction();       // false
 myFunction.call(myObject);  // false
 ```
-
-
