@@ -64,9 +64,7 @@ const myObject = {
 myObject.myFunction();
 ```
 
-### Practice
-
-What is the output of this?
+Practice: What is the output of this?
 
 ```javascript
 const myObject = {
@@ -185,6 +183,32 @@ const myFunction = () => {
 myFunction();       // false
 myFunction.call(myObject);  // false
 ```
+
+## Workaround
+
+Using a temporary variable to capture `this`
+
+```javascript
+const myObject = {
+    myFunction: function() {
+        const self = this;
+        console.log(self === myObject);     // true
+
+        function innerFunction() {
+            console.log(self === myObject); // true
+        }
+        innerFunction();
+
+        setTimeout(function () {
+            console.log(self === myObject); // true
+        }, 0);
+    }
+};
+
+myObject.myFunction();
+```
+
+Question: Why does this work?
 
 ## References
 
