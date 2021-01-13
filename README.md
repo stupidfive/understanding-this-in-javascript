@@ -113,3 +113,60 @@ const myFunction = myObject.myFunction.bind(myOtherObject);
 myFunction('hello', 'world');
 ```
 
+## Shorthand
+
+```javascript
+const myObject = {
+    myFunction() {
+        console.log(this === myObject);
+    }
+}
+
+myObject.myFunction();  // true
+const myFunction = myObject.myFunction;
+myFunction();   // false
+```
+
+## Arrow Function
+
+```javascript
+const myFunction = () => {
+    console.log(this === window)    // true
+};
+
+myFunction();
+```
+
+```javascript
+const myObject = {
+    myFunction: function() {
+        console.log(this === myObject);     // true
+
+        const innerArrow = () => {
+            console.log(this === myObject); // true
+        };
+        innerArrow();
+
+        setTimeout(() => {
+            console.log(this === myObject); // true
+        }, 0);
+    }
+};
+
+myObject.myFunction();
+```
+
+`call`, `apply` or `bind` won't change the behavior of `this`.
+
+```javascript
+const myObject = {};
+
+const myFunction = () => {
+    console.log(this === myObject);
+}
+
+myFunction();       // false
+myFunction.call(myObject);  // false
+```
+
+
