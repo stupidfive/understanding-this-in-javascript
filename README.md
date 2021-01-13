@@ -170,3 +170,11 @@ const myFunction = () => {
 myFunction();       // false
 myFunction.call(myObject);  // false
 ```
+
+## References
+
+- [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Function.prototype.call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+- [Function.prototype.bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
