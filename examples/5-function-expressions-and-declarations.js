@@ -2,6 +2,6 @@ function myFunctionDeclaration() {
     // ...
 }
 
-const myFUnctionExpression = function() {
+const myFunctionExpression = function() {
     // ...
 };

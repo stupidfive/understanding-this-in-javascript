@@ -1,6 +1,6 @@
 const myObject = {
     myFunction() {
-        console.log(this === myObject);     // false
+        console.log(this === myObject);
     }
 }
 
