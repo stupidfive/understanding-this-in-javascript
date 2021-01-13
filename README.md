@@ -64,6 +64,21 @@ const myObject = {
 myObject.myFunction();
 ```
 
+### Practice
+
+What is the output of this?
+
+```javascript
+const myObject = {
+    myFunction: function(a, b) {
+        console.log(a + ' ' + b);
+        console.log(this === myObject);
+    }
+}
+
+myObject.myFunction();
+```
+
 ## Manually Change the Value of `this`
 
 Using `call`
